@@ -36,15 +36,15 @@ static void mgos_provision_state_change_cb(int ev, void *evd, void *arg) {
   }
   switch (ev_arg->cur_state) {
     case MGOS_PROVISION_ST_NOT_PROVISIONED: {
-      mgos_gpio_blink(pin, 500, 2000);
+      mgos_gpio_blink(pin, 2000, 2000);
       break;
     }
     case MGOS_PROVISION_ST_NETWORK_CONFIGURED: {
-      mgos_gpio_blink(pin, 500, 500);
+      mgos_gpio_blink(pin, 1000, 1000);
       break;
     }
     case MGOS_PROVISION_ST_NETWORK_CONNECTED: {
-      mgos_gpio_blink(pin, 100, 200);
+      mgos_gpio_blink(pin, 150, 150);
       break;
     }
     case MGOS_PROVISION_ST_CLOUD_CONNECTED: {
